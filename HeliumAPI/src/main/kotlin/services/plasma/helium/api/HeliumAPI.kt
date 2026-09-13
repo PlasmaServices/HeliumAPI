@@ -1,7 +1,8 @@
 package services.plasma.helium.api
 
+import services.plasma.helium.profile.PlayerStatus
 import services.plasma.helium.profile.punishment.Punishment
-import services.plasma.helium.profile.settings.PlayerSetting
+import services.plasma.helium.profile.settings.PlayerSettings
 import java.util.UUID
 
 enum class HeliumAPI {
@@ -180,22 +181,37 @@ enum class HeliumAPI {
     }
 
     @Throws(RuntimeException::class)
-    fun getSetting(uuid: UUID, setting: PlayerSetting): String {
+    fun getSetting(uuid: UUID, setting: PlayerSettings): String {
         throw RuntimeException("HeliumAPI is not a plugin!")
     }
 
     @Throws(RuntimeException::class)
-    fun setSetting(uuid: UUID, setting: PlayerSetting, state: String): Boolean {
+    fun getSettings(uuid: UUID): Map<PlayerSettings, String> {
         throw RuntimeException("HeliumAPI is not a plugin!")
     }
 
     @Throws(RuntimeException::class)
-    fun toggleSetting(uuid: UUID, setting: PlayerSetting): String {
+    fun setSetting(uuid: UUID, setting: PlayerSettings, state: String): Boolean {
         throw RuntimeException("HeliumAPI is not a plugin!")
     }
 
     @Throws(RuntimeException::class)
-    fun getSettingStates(setting: PlayerSetting): List<String> {
+    fun toggleSetting(uuid: UUID, setting: PlayerSettings): String {
+        throw RuntimeException("HeliumAPI is not a plugin!")
+    }
+
+    @Throws(RuntimeException::class)
+    fun getSettingStates(setting: PlayerSettings): List<String> {
+        throw RuntimeException("HeliumAPI is not a plugin!")
+    }
+
+    @Throws(RuntimeException::class)
+    fun getStatus(uuid: UUID): PlayerStatus {
+        throw RuntimeException("HeliumAPI is not a plugin!")
+    }
+
+    @Throws(RuntimeException::class)
+    fun getStatusStates(): List<PlayerStatus> {
         throw RuntimeException("HeliumAPI is not a plugin!")
     }
 

@@ -1,6 +1,6 @@
 package services.plasma.helium.profile.settings
 
-enum class PlayerSetting(val displayName: String, val description: String, val states: List<String>) {
+enum class PlayerSettings(val displayName: String, val description: String, val states: List<String>) {
     GLOBAL_CHAT("Global Chat", "See public messages.", listOf("enabled", "disabled")),
     PRIVATE_MESSAGES("Private Messages", "Let other message you.", listOf("enabled", "disabled")),
     FRIEND_REQUESTS("Friend Requests", "Let other friend you.", listOf("enabled", "disabled")),

@@ -1,6 +1,7 @@
 package services.plasma.helium.api
 
 import services.plasma.helium.profile.punishment.Punishment
+import services.plasma.helium.profile.settings.PlayerSetting
 import java.util.UUID
 
 enum class HeliumAPI {
@@ -175,6 +176,26 @@ enum class HeliumAPI {
 
     @Throws(RuntimeException::class)
     fun getAllPunishments(uuid: UUID): List<Punishment> {
+        throw RuntimeException("HeliumAPI is not a plugin!")
+    }
+
+    @Throws(RuntimeException::class)
+    fun getSetting(uuid: UUID, setting: PlayerSetting): String {
+        throw RuntimeException("HeliumAPI is not a plugin!")
+    }
+
+    @Throws(RuntimeException::class)
+    fun setSetting(uuid: UUID, setting: PlayerSetting, state: String): Boolean {
+        throw RuntimeException("HeliumAPI is not a plugin!")
+    }
+
+    @Throws(RuntimeException::class)
+    fun toggleSetting(uuid: UUID, setting: PlayerSetting): String {
+        throw RuntimeException("HeliumAPI is not a plugin!")
+    }
+
+    @Throws(RuntimeException::class)
+    fun getSettingStates(setting: PlayerSetting): List<String> {
         throw RuntimeException("HeliumAPI is not a plugin!")
     }
 
